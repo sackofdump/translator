@@ -280,7 +280,7 @@
     </div>
   </div>
 
-  <button class="translate-btn" id="btn" onclick="translate()">🔥 TRANSLATE DAT 🔥</button>
+  <button class="translate-btn" id="btn" onclick="doTranslate()">🔥 TRANSLATE DAT 🔥</button>
 
   <div class="output-card" id="output">
     <div class="card-label"><span>💬</span> Street Version</div>
@@ -301,7 +301,7 @@
     dramaVal.textContent = dramaSlider.value;
   });
 
-  async function translate() {
+  async function doTranslate() {
     const input = document.getElementById('input').value.trim();
     if (!input) return;
 
@@ -375,7 +375,7 @@ Rules:
   }
 
   document.getElementById('input').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && e.ctrlKey) translate();
+    if (e.key === 'Enter' && e.ctrlKey) doTranslate();
   });
 </script>
 </body>
